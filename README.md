@@ -1,3 +1,7 @@
+This is all AI generated...
+mostly correct
+but not my style.
+
 # Signal K to LwM2M Bridge
 
 A **Signal K to LwM2M Bridge** that subscribes to Signal K server data and forwards it to LwM2M clients. Perfect for marine IoT applications where you need to bridge Signal K marine data (navigation, sensors, alarms) to LwM2M devices or servers.
@@ -7,23 +11,6 @@ A **Signal K to LwM2M Bridge** that subscribes to Signal K server data and forwa
 - 📡 Satellite IoT integration via LwM2M 
 - 🌊 Maritime sensor data forwarding
 - 🛰️ Fleet monitoring and tracking systems
-
-## 🚀 GitHub Repository Setup
-
-This project is ready to be pushed to GitHub! To create your repository:
-
-1. **Go to [GitHub.com](https://github.com)** and create a new repository named `signalk-lwm2m-bridge`
-2. **Don't initialize** with README, .gitignore, or license (we already have them)
-3. **Copy the repository URL** and run these commands:
-
-```bash
-# Add your GitHub repository as remote
-git remote add origin https://github.com/YOUR-USERNAME/signalk-lwm2m-bridge.git
-
-# Push the code to GitHub  
-git branch -M main
-git push -u origin main
-```
 
 ## 📦 Installation
 
@@ -118,7 +105,7 @@ controller.on('ready', () => {
 controller.start();
 ```
 
-### REST API Usage
+### REST API Usage (work in progress)
 
 ```javascript
 // Update temperature sensor
@@ -169,7 +156,7 @@ https://san.win.tue.nl/education/IoT-inf4all/files/IPSO-Smart-Objects-Expansion-
 | **3300** | Generic Sensor | General purpose sensor | Universal sensor interface |
 | **3311** | Light Control | Lighting control system | Marine/navigation lights |
 
-## Resources of Digital Input (Object 3200)
+## Example Resources of Digital Input (Object 3200)
 wget https://raw.githubusercontent.com/OpenMobileAlliance/lwm2m-registry/prod/3200.xml
 save it to /config
 
