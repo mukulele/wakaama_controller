@@ -1,16 +1,49 @@
-# Signal K LwM2M Bridge
+# Signal K to LwM2M Bridge
 
-A **Signal K server** that bridges LwM2M IoT devices to the Signal K marine data standard, converting sensor data to real-time marine navigation and environmental data streams.
+A **Signal K to LwM2M Bridge** that subscribes to Signal K server data and forwards it to LwM2M clients. Perfect for marine IoT applications where you need to bridge Signal K marine data (navigation, sensors, alarms) to LwM2M devices or servers.
 
-## Features
+**Key Use Cases:**
+- 🚢 Marine emergency notification systems (MOB, fire, collision alerts)
+- 📡 Satellite IoT integration via LwM2M 
+- 🌊 Maritime sensor data forwarding
+- 🛰️ Fleet monitoring and tracking systems
 
-- � **Signal K Server**: Full Signal K v1.0 server with WebSocket streaming and REST API
-- 🌊 **Marine Data Standard**: Converts LwM2M sensor data to Signal K navigation and environmental paths
-- � **WebSocket Streaming**: Real-time data updates via Signal K delta messages
-- �️ **Navigation Data**: GPS coordinates → `navigation.position`, sensor data → `environment.*`
-- 🚀 **LwM2M Bridge**: Controls Wakaama LwM2M client as a child process
-- 🔧 **TypeScript**: Full type safety with Signal K data types and interfaces
-- 🛠️ **VS Code Integration**: Tasks and launch configurations for easy development
+## 🚀 GitHub Repository Setup
+
+This project is ready to be pushed to GitHub! To create your repository:
+
+1. **Go to [GitHub.com](https://github.com)** and create a new repository named `signalk-lwm2m-bridge`
+2. **Don't initialize** with README, .gitignore, or license (we already have them)
+3. **Copy the repository URL** and run these commands:
+
+```bash
+# Add your GitHub repository as remote
+git remote add origin https://github.com/YOUR-USERNAME/signalk-lwm2m-bridge.git
+
+# Push the code to GitHub  
+git branch -M main
+git push -u origin main
+```
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/YOUR-USERNAME/signalk-lwm2m-bridge.git
+cd signalk-lwm2m-bridge
+npm install
+npm run build
+```
+
+## ✨ Features
+
+- 🚢 **Signal K Integration**: WebSocket subscription to Signal K server with template-based mapping
+- 🚨 **Emergency Notifications**: Object 3336 support for MOB, fire, collision, and other critical alerts  
+- ⚡ **High-Performance Validation**: Pre-computed mandatory resource validation with sub-millisecond speed
+- 🌍 **GPS Fallback**: Emergency notifications always get through with fallback coordinates (0.0, 0.0)
+- 📡 **3GPP Velocity Encoding**: Full TS 23.032 GAD specification compliance
+- � **LwM2M Standards**: 16 official object specifications with automatic validation
+- �️ **Type Safety**: Full TypeScript implementation with comprehensive error handling
+- � **Real-time Monitoring**: Detailed logging and status reporting
 
 ## Project Structure
 
