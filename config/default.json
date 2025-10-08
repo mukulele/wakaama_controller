@@ -1,0 +1,18 @@
+{
+  "signalk": {
+    "server": "rpi.local:3000",
+    "reconnectDelay": 5000,
+    "maxReconnectAttempts": 10,
+    "subscription": {
+      "period": 10000,
+      "format": "delta",
+      "policy": "ideal",
+      "minPeriod": 200
+    }
+  },
+  "lwm2m": {
+    "clientPath": "/home/pi/wakaama/my-client-project/udp/build/my-lwm2m-client",
+    "clientOptions": "-n my-wakakaama-controller -h leshan.eclipseprojects.io -p 5683 -4",
+    "clientOptions1": "-b -h lwm2m.os.1nce.com -p 5683 -4"
+  }
+}

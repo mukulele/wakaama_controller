@@ -1,0 +1,107 @@
+{
+  "version": "1.0",
+  "description": "Signal K to LwM2M path mappings and unit conversions",
+  "mappings": [
+    {
+      "description": "CPU Temperature from Raspberry Pi monitoring",
+      "signalkPath": "environment.rpi.cpu.temperature",
+      "object_id": 3303,
+      "instance_id": 0,
+      "resource_id": 5700,
+      "conversion": "kelvin_to_celsius"
+    },
+    {
+      "description": "GPS Latitude",
+      "signalkPath": "navigation.position.latitude",
+      "object_id": 6,
+      "instance_id": 0,
+      "resource_id": 0,
+      "conversion": "none"
+    },
+    {
+      "description": "GPS Longitude", 
+      "signalkPath": "navigation.position.longitude",
+      "object_id": 6,
+      "instance_id": 0,
+      "resource_id": 1,
+      "conversion": "none"
+    },
+        {
+      "description": "Altitude", 
+      "signalkPath": "navigation.gnss.antennaAltitude",
+      "object_id": 6,
+      "instance_id": 0,
+      "resource_id": 2,
+      "conversion": "none"
+    },
+        {
+      "description": "Radius", 
+      "signalkPath": "navigation.gnss.horizontalDilution",
+      "object_id": 6,
+      "instance_id": 0,
+      "resource_id": 3,
+      "conversion": "none"
+    },
+        {
+      "description": "Velocity from Speed over Ground", 
+      "signalkPath": "helpers.3gpp_ts_23032_velocity",
+      "object_id": 6,
+      "instance_id": 0,
+      "resource_id": 4,
+      "conversion": "none"
+    },
+    {
+      "description": "Course Over Ground True",
+      "signalkPath": "navigation.courseOverGroundTrue",
+      "object_id": 6,
+      "instance_id": 0,
+      "resource_id": 5,
+      "conversion": "none"
+    },
+    {
+      "description": "Speed",
+      "signalkPath": "navigation.speedOverGround",
+      "object_id": 6,
+      "instance_id": 0,
+      "resource_id": 6,
+      "conversion": "none"
+    },
+    {
+      "description": "Notifications",
+      "signalkPath": "notifications.*",
+      "object_id": 3336,
+      "template_mapping": true,
+      "instance_mapping": {
+        "mob": 0,
+        "fire": 1,
+        "flooding": 2,
+        "collision": 3,
+        "grounding": 4,
+        "listing": 5,
+        "adrift": 6,
+        "piracy": 7,
+        "abandon": 8,
+        "aground": 9
+      },
+      "resources": {
+        "5700": "value.message",
+        "5701": "value.state",
+        "5702": "value.method",
+        "6051": "value.position.latitude",
+        "6052": "value.position.longitude",
+        "5518": "timestamp",
+        "5705": "navigation.courseOverGroundTrue",
+        "5750": "uuid"
+      }
+    },
+    {
+      "description": "CPU Utilization",
+      "signalkPath": "environment.rpi.cpu.utilisation"
+    },
+    {
+      "description": "Memory Utilization",
+      "signalkPath": "environment.rpi.memory.utilisation"
+    }
+
+  ]
+}

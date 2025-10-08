@@ -1,0 +1,40 @@
+{
+  "name": "lwm2m-node-controller",
+  "version": "1.0.0",
+  "description": "Node.js controller for Wakaama LwM2M client",
+  "main": "src/lwm2m-controller.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/signalk-client.js",
+    "dev": "ts-node src/signalk-client.ts",
+    "signalk-server": "node dist/api-server.js",
+    "signalk-client": "node dist/signalk-client.js",
+    "test-signalk": "node test-signalk.js",
+    "build-client": "cd /home/pi/wakaama/my-client-project/udp && cmake --build build",
+    "test": "node test/test-controller.js"
+  },
+  "keywords": [
+    "lwm2m",
+    "iot",
+    "wakaama",
+    "controller"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.18.1",
+    "axios": "^1.12.2",
+    "express": "^4.18.2",
+    "uuid": "^13.0.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.7.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
